@@ -40,11 +40,12 @@ const EventDetails = () => {
                                     <hr className="mt-4"/>
                                     <div className="row mt-4 mb-4">
                                         <h3>Speakers ({detailsOfEvent.speakers.length})</h3>
-                                            {detailsOfEvent.speakers.map((speaker) => (
-                                                <div className="col-md-6">
-                                                    <div className="card bg-white border-0 rounded d-flex align-items-center py-3 my-2">
+                                            {detailsOfEvent.speakers.map((speaker, index) => (
+                                                <div className="col-md-6 mb-2" key={index}>
+                                                    <div className="card bg-white border-0 rounded d-flex align-items-center py-3 h-100">
                                                         <img src={speaker.image} className="img-fluid rounded-circle" style={{height: "80px", width: "80px", objectFit: "cover"}}/>
-                                                        <div className="fw-medium text-center">{speaker.name}</div><div className="fw-light text-center">{speaker.expertise}</div>
+                                                        <div className="fw-medium text-center container mt-2">{speaker.name}</div>
+                                                        <div className="fw-light text-center container">{speaker.expertise}</div>
                                                     </div>
                                                 </div>
                                             ))}
