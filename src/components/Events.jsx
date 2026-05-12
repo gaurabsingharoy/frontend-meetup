@@ -6,6 +6,8 @@ const Events = () => {
     const [eventType, setEventType] = useState("All")
     const [searchQuery, setSearchQuery] = useState("")
     const {data, loading, error} = useFetch("https://backend-meetup-nine.vercel.app/meetups")
+    
+    //filtering for eventType and search query
     const filteredEventData = data?.filter((event) => {
         const matchesType = eventType === "All" || event.eventType === eventType;
         const lowerCaseQuery = searchQuery.toLowerCase();

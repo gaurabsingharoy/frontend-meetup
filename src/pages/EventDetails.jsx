@@ -14,7 +14,6 @@ const EventDetails = () => {
     const {eventId} = useParams()
     const detailsOfEvent = data?.find((event) => event._id == eventId)
     //console.log(detailsOfEvent)
-    console.log()
 
     return (
         <div className="bg-body-secondary">
